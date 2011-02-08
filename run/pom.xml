@@ -31,6 +31,16 @@
             <artifactId>database</artifactId>
             <version>1.0</version>
         </dependency>
+        <dependency>
+            <groupId>uk.co.dailymail.firstname</groupId>
+            <artifactId>firstname</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>uk.co.dailymail.lastname</groupId>
+            <artifactId>lastname</artifactId>
+            <version>1.0</version>
+        </dependency>
     </dependencies>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
