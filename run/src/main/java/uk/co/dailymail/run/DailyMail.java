@@ -6,6 +6,8 @@ import uk.co.dailymail.dao.GenericDao;
 import uk.co.dailymail.dao.hibernate.HibernateDao;
 import uk.co.dailymail.domain.Address;
 import uk.co.dailymail.domain.User;
+import uk.co.dailymail.firstname.FirstName;
+import uk.co.dailymail.lastname.LastName;
 
 import java.util.Date;
 import java.util.List;
@@ -45,5 +47,8 @@ public class DailyMail {
         List<User> users = dao.retrieveAll(User.class);
 
         for (User u : users) System.out.println(u);
+
+        FirstName firstName = new FirstName("tcp://localhost:61616", null, "fnQueue");
+        LastName lastName = new LastName("tcp://localhost:61616", "fnQueue", null);
     }
 }
