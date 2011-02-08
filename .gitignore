@@ -1,0 +1,7 @@
+activemq-data/
+*.iml
+*.ipr
+*.iws
+derby.log
+derbydb/
+target/
