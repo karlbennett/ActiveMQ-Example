@@ -33,6 +33,8 @@ public abstract class Messenger<I extends Serializable, O extends Serializable> 
         this.oQueue = oQueue;
 
         this.connectionFactory = new ActiveMQConnectionFactory(uri);
+
+        loop();
     }
 
     /**
@@ -72,6 +74,7 @@ public abstract class Messenger<I extends Serializable, O extends Serializable> 
                 connection.close();
             } catch (JMSException e) {
                 // TODO log exception.
+                System.out.println(this.getClass().getSimpleName() + " error retrieving object: " + e.getMessage());
             }
         }
 
@@ -107,6 +110,7 @@ public abstract class Messenger<I extends Serializable, O extends Serializable> 
                 connection.close();
             } catch (JMSException e) {
                 // TODO log exception.
+                System.out.println(this.getClass().getSimpleName() + " error sending object: " + e.getMessage());
             }
         }
     }
