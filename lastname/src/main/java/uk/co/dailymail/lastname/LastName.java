@@ -15,7 +15,7 @@ public class LastName extends Messenger<String, String> {
      * @param iQueue - the name of the input queue.
      * @param oQueue - the name of the output queue.
      */
-    protected LastName(String uri, String iQueue, String oQueue) {
+    public LastName(String uri, String iQueue, String oQueue) {
         super(uri, iQueue, oQueue);
     }
 
